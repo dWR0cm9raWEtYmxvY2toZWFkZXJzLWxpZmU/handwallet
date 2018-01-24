@@ -1,0 +1,16 @@
+import React from 'react';
+import { View, Text } from 'react-native';
+import { DrawerNavigator } from 'react-navigation';
+import HomeScreen from './containers/home'
+
+
+const RootNavigator = DrawerNavigator({
+    Home: {
+	screen: HomeScreen
+    }
+},{
+    drawerPosition: 'right',
+    drawerWidth: 100
+});
+
+export default RootNavigator;

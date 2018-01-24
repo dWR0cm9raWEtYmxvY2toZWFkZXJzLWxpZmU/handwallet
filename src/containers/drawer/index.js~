@@ -1,0 +1,25 @@
+
+import React, { Component } from 'react'
+import {
+    View, Text, TouchableOpacity, ScrollView
+} from 'react-native'
+import { SafeAreaView } from 'react-navigation'
+import { connect } from 'react-redux'
+
+class Drawer extends Component{
+    render(){
+	return(
+	    <ScrollView>
+		<SafeAreaView>
+		    <TouchableOpacity><Text>BTC</Text></TouchableOpacity>
+		</SafeAreaView>
+	    </ScrollView>
+	)
+    }
+}
+
+const mapStateToProps = state =>({
+    auth: state.auth
+})
+
+export default connect(mapStateToProps)(Drawer)
